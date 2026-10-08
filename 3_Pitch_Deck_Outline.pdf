@@ -1,0 +1,62 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 2524 >>
+stream
+BT /F2 18 Tf 1 0 0 1 40 792 Tm (EcoPlate AI: Pitch Deck Outline & Speaker Script) Tj ET
+BT /F2 13 Tf 1 0 0 1 40 766 Tm (Deliverable 3: PowerPoint Presentation Outline \(12 Slides\)) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 738 Tm (Slide 1: Title Slide) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 722 Tm (EcoPlate AI: Zero-Touch Food Waste Intelligence for Indian Messes \(SDG 12 & FSSAI\).) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 697 Tm (Slide 2: The Problem Scale) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 681 Tm (68M Tons food waste in India; 25-35% mess waste due to itemized data blindspot.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 656 Tm (Slide 3: The EcoPlate Solution) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 640 Tm (Overhead edge YOLOv8 camera + FastAPI backend + Autonomous Procurement Agent in INR.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 615 Tm (Slide 4: Technical Architecture) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 599 Tm (Raspberry Pi 5 edge vision, async Python backend, React frontend, TimescaleDB store.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 574 Tm (Slide 5: Autonomous Agent Flow) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 558 Tm (Vision Agent -> Analytics Agent -> Procurement Agent \(Auto POs & WhatsApp alerts\).) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 533 Tm (Slide 6: Business Model \(Lean Canvas\)) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 517 Tm (B2B SaaS \(INR 25k-60k/mo\) + Hardware Setup \(INR 85k-1.8L\) + Enterprise Integrations.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 492 Tm (Slide 7: Unfair Advantage Matrix) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 476 Tm (100% hands-free vision vs manual scales; proprietary Indian regional thali dataset.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 451 Tm (Slide 8: Environmental & ESG Impact) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 435 Tm (50 Tons waste saved/yr, 120 Tons CO2e avoided/yr, SEBI BRSR ESG audit compliance.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 410 Tm (Slide 9: Market Opportunity & GTM) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 394 Tm (TAM: INR 35,000 Cr; GTM via Sodexo India, Compass Group India, higher ed pilots.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 369 Tm (Slide 10: Product Roadmap) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 353 Tm (Q1 Prototype -> Q2 Campus Pilots -> Q3 SAP/Tally Connectors -> Q4 50 Commercial) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 340 Tm (Messes.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 315 Tm (Slide 11: Team & IBM Synergy) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 299 Tm (Computer vision & full-stack expertise built with IBM Agentic AI principles.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 274 Tm (Slide 12: Call to Action) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 258 Tm (Join us in halving institutional food waste in India by 2030!) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000002827 00000 n 
+0000002897 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+2972
+%%EOF

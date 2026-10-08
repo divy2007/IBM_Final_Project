@@ -1,0 +1,75 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 4078 >>
+stream
+BT /F2 18 Tf 1 0 0 1 40 792 Tm (EcoPlate AI: Project Concept Note) Tj ET
+BT /F2 13 Tf 1 0 0 1 40 766 Tm (Deliverable 2: Concept Note \(India Region & UN SDG 12 Target 12.3\)) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 738 Tm (1. Executive Summary & Background) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 722 Tm (Institutional kitchens in India?such as university hostel messes \(IITs, NITs\) and) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 709 Tm (corporate IT cafeterias in Bengaluru, Hyderabad, and Pune?prepare thousands of meals) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 696 Tm (daily, yet 25-35% of prepared food ends up wasted. This inefficiency stems from an) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 683 Tm (information void at disposal stations. Mess wardens log total waste weight without) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 670 Tm (tracking specific dishes \(Paneer Butter Masala, Basmati Rice, Dal Tadka\).) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 657 Tm (Consequently, kitchens over-purchase ingredients, incurring severe financial losses) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 644 Tm (\(INR 2 Lakh to INR 5 Lakh monthly per campus\) and generating landfill methane) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 631 Tm (emissions.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 614 Tm (EcoPlate AI addresses this challenge by deploying an autonomous multi-agent AI) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 601 Tm (framework powered by edge computer vision fine-tuned on regional Indian cuisine.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 588 Tm (Positioned above disposal bins, EcoPlate AI classifies and quantifies food waste in) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 40 575 Tm (real time, translating telemetry into automated predictive supply chain adjustments.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 550 Tm (2. System Architecture & Core AI Technologies) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 534 Tm (- Edge Computer Vision: Low-cost edge hardware \(Raspberry Pi 5 / NVIDIA Jetson\)) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 521 Tm (  running YOLOv8 fine-tuned on Indian cuisine for sub-100ms dish classification) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 508 Tm (  and spatial depth volume estimation.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 493 Tm (- FastAPI Asynchronous Backend: High-performance Python backend processing vision) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 480 Tm (  telemetry, mapping volume to financial cost in INR, and calculating CO2e) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 467 Tm (  avoided.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 452 Tm (- React Web Dashboard: Responsive interface presenting real-time financial loss) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 439 Tm (  counters in INR, waste category heatmaps, and downloadable ESG compliance) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 426 Tm (  reports.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 403 Tm (3. Autonomous Multi-Agent Workflow \(Zero Human Intervention\)) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 387 Tm (- Step 1 \(Vision Agent\): Scans disposal frames, tags Indian dish categories,) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 374 Tm (  calculates mass and monetary loss in INR.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 359 Tm (- Step 2 \(Analytics Agent\): Correlates waste streams against 30-day historical) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 346 Tm (  trends, weather, and exam schedules.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 331 Tm (- Step 3 \(Procurement Agent\): Calculates recipe batch size reductions and) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 318 Tm (  auto-drafts Purchase Orders \(POs\) in INR.) Tj ET
+BT /F2 11 Tf 1 0 0 1 40 295 Tm (4. Measurable Impact on UN SDG 12 & FSSAI / SEBI BRSR) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 279 Tm (- Waste Volume: 40% reduction in organic waste \(~140 kg saved daily per mess, 50) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 266 Tm (  Metric Tons/year\).) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 251 Tm (- Financial Savings: INR 1,50,000 - INR 4,50,000 saved per month in procurement) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 238 Tm (  spend.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 223 Tm (- Decarbonization: ~120 Metric Tons of CO2e avoided annually per mess.) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 208 Tm (- Compliance: 100% digital audit readiness for FSSAI Save Food Share Food & SEBI) Tj ET
+BT /F1 9.5 Tf 1 0 0 1 50 195 Tm (  BRSR ESG disclosures.) Tj ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+6 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+xref
+0 7
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000251 00000 n 
+0000004381 00000 n 
+0000004451 00000 n 
+trailer
+<< /Size 7 /Root 1 0 R >>
+startxref
+4526
+%%EOF

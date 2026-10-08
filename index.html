@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlate AI: Zero-Touch Food Waste Intelligence for Institutional Kitchens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+    <!-- Header Navbar -->
+    <header class="navbar">
+        <div class="brand">
+            <div class="brand-icon">🌱</div>
+            <div>
+                <div class="brand-title">EcoPlate AI</div>
+                <div style="font-size:0.7rem; color:var(--color-text-muted);">Autonomous Multi-Agent Food Waste Intelligence Platform</div>
+            </div>
+            <span class="brand-badge">Enterprise AI Solution</span>
+        </div>
+
+        <nav class="nav-tabs">
+            <button class="tab-btn active" data-tab="overview">📊 Executive Overview</button>
+            <button class="tab-btn" data-tab="vision-sim">👁️ Edge Vision Station</button>
+            <button class="tab-btn" data-tab="agent-center">🤖 Multi-Agent Engine</button>
+            <button class="tab-btn" data-tab="esg-report">🌿 ESG & BRSR Center</button>
+            <button class="tab-btn" data-tab="pricing-roi">💎 Pricing & ROI Calculator</button>
+        </nav>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-content">
+
+        <!-- TAB 1: EXECUTIVE OVERVIEW -->
+        <section id="overview" class="tab-page active">
+            <!-- KPI Summary Cards -->
+            <div class="kpi-grid">
+                <div class="glass-panel kpi-card">
+                    <div class="kpi-title">Total Food Waste Tracked</div>
+                    <div class="kpi-value" id="statWeight">2,140.5 kg</div>
+                    <div class="kpi-sub">
+                        <span>30-Day Discarded Organic Mass</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel kpi-card">
+                    <div class="kpi-title">Direct Procurement Loss</div>
+                    <div class="kpi-value" id="statLoss" style="color:var(--color-danger);">₹2,85,400</div>
+                    <div class="kpi-sub">
+                        <span>Wasted Food Ingredient Cost (INR)</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel kpi-card">
+                    <div class="kpi-title">Carbon Footprint Impact</div>
+                    <div class="kpi-value" id="statCo2" style="color:var(--color-gold);">4,850 kg</div>
+                    <div class="kpi-sub">
+                        <span>CO2 Equivalent Methane Impact</span>
+                    </div>
+                </div>
+
+                <div class="glass-panel kpi-card">
+                    <div class="kpi-title">Predictive Savings Potential</div>
+                    <div class="kpi-value" id="statSavings" style="color:var(--color-emerald);">₹99,890</div>
+                    <div class="kpi-sub">
+                        <span>Target 35% Procurement Optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dashboard Layout -->
+            <div class="dashboard-layout">
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem; font-size:1.1rem;">Top Wasted Mess Items (Real-Time Telemetry)</h3>
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Dish Name</th>
+                                <th>Category</th>
+                                <th>Total Weight (kg)</th>
+                                <th>Financial Loss (₹)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dishesTableBody">
+                            <!-- Populated dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem; font-size:1.1rem;">Waste Category Distribution</h3>
+                    <div id="categoryBreakdown">
+                        <!-- Populated dynamically -->
+                    </div>
+
+                    <div style="margin-top:1.5rem; padding:1rem; background:rgba(6,182,212,0.08); border-radius:8px; border:1px solid rgba(6,182,212,0.2);">
+                        <div style="font-size:0.8rem; color:var(--color-cyan); font-weight:600;">Edge Vision Recognition Accuracy</div>
+                        <div style="font-size:1.8rem; font-weight:700; font-family:var(--font-heading);" id="statAccuracy">95.2%</div>
+                        <div style="font-size:0.75rem; color:var(--color-text-muted);">YOLOv8 Fine-Tuned Regional Cuisine Model</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 2: EDGE VISION STATION -->
+        <section id="vision-sim" class="tab-page">
+            <div class="dashboard-layout">
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem;">Overhead Disposal Camera Feed (Station: MESS-BIN-EDGE-01)</h3>
+                    
+                    <div class="camera-wrapper">
+                        <canvas id="visionCanvas"></canvas>
+                        <div class="camera-overlay-badge">
+                            <span class="pulse-dot"></span>
+                            <span>LIVE EDGE SENSOR: 1080p @ 30FPS</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-top:1.25rem; display:flex; gap:1rem; align-items:center;">
+                        <button id="scanBtn" class="btn-primary">
+                            <span>📸 Trigger Edge Bin Vision Scan</span>
+                        </button>
+
+                        <select id="scanDishSelect" style="background:#161b26; color:var(--color-text-main); border:1px solid rgba(255,255,255,0.15); padding:0.7rem 1rem; border-radius:8px;">
+                            <option value="">-- Select Test Dish Frame --</option>
+                            <option value="Paneer Butter Masala">Paneer Butter Masala</option>
+                            <option value="Steamed Basmati Rice">Steamed Basmati Rice</option>
+                            <option value="Hyderabadi Chicken Biryani">Hyderabadi Chicken Biryani</option>
+                            <option value="Dal Tadka & Rajma">Dal Tadka & Rajma</option>
+                            <option value="Vegetable Pulao">Vegetable Pulao</option>
+                            <option value="Butter Naan & Roti">Butter Naan & Roti</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem;">Real-Time Detection Telemetry Log</h3>
+                    <div id="scanLogBox" class="terminal-window">
+                        <div class="terminal-line"><span class="terminal-time">[System]</span> Optical edge station online. Awaiting tray disposal stream events...</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 3: MULTI-AGENT ENGINE -->
+        <section id="agent-center" class="tab-page">
+            <div style="margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <h2 style="font-family:var(--font-heading); font-size:1.5rem;">Autonomous Multi-Agent Command Center</h2>
+                    <p style="font-size:0.85rem; color:var(--color-text-muted);">Closed-loop intelligence connecting disposal vision directly to predictive kitchen procurement.</p>
+                </div>
+                <button id="runAgentsBtn" class="btn-primary">
+                    <span>⚡ Run Multi-Agent Synchronization</span>
+                </button>
+            </div>
+
+            <!-- Agent Network Cards -->
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1.25rem; margin-bottom:1.5rem;">
+                <div class="glass-panel" style="padding:1.25rem;">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span style="font-size:1.4rem;">👁️</span>
+                        <h4 style="font-family:var(--font-heading);">Vision Agent</h4>
+                    </div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted);">Executes YOLOv8 object detection on camera frames & estimates item mass and density.</p>
+                    <div style="margin-top:0.75rem; font-size:0.75rem; color:var(--color-emerald);">Status: ACTIVE (Sub-100ms)</div>
+                </div>
+
+                <div class="glass-panel" style="padding:1.25rem;">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span style="font-size:1.4rem;">📊</span>
+                        <h4 style="font-family:var(--font-heading);">Analytics Agent</h4>
+                    </div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted);">Evaluates 30-day temporal trends, weather patterns, and menu shift anomalies.</p>
+                    <div style="margin-top:0.75rem; font-size:0.75rem; color:var(--color-cyan);">Status: MONITORING</div>
+                </div>
+
+                <div class="glass-panel" style="padding:1.25rem;">
+                    <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.5rem;">
+                        <span style="font-size:1.4rem;">🤖</span>
+                        <h4 style="font-family:var(--font-heading);">Procurement Agent</h4>
+                    </div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted);">Generates automated portion scale advice & draft ingredient purchase orders in INR (₹).</p>
+                    <div style="margin-top:0.75rem; font-size:0.75rem; color:var(--color-gold);">Status: AUTONOMOUS</div>
+                </div>
+            </div>
+
+            <div class="dashboard-layout">
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem;">Actionable Procurement & Portion Cards (INR ₹)</h3>
+                    <div id="recommendationsContainer">
+                        <!-- Populated dynamically -->
+                    </div>
+                </div>
+
+                <div class="glass-panel" style="padding:1.5rem;">
+                    <h3 style="font-family:var(--font-heading); margin-bottom:1rem;">Agent Reasoning Console</h3>
+                    <div id="agentTerminal" class="terminal-window" style="min-height:300px;">
+                        <div class="terminal-line"><span class="terminal-time">[System]</span> Agents idle. Click 'Run Multi-Agent Synchronization' to trigger reasoning loop.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 4: ESG & BRSR CENTER -->
+        <section id="esg-report" class="tab-page">
+            <div style="margin-bottom:1.5rem; display:flex; justify-content:space-between; align-items:center;">
+                <div>
+                    <h2 style="font-family:var(--font-heading); font-size:1.5rem;">UN SDG 12 & SEBI BRSR Compliance Center</h2>
+                    <p style="font-size:0.85rem; color:var(--color-text-muted);">Auditable sustainability & carbon offset reporting for institutional and corporate disclosures.</p>
+                </div>
+                <button id="fetchEsgBtn" class="btn-primary">
+                    <span>📑 Generate ESG Audit Certificate</span>
+                </button>
+            </div>
+
+            <div id="esgReportDisplay">
+                <div class="glass-panel" style="padding:2rem; text-align:center;">
+                    <p style="color:var(--color-text-muted);">Click 'Generate ESG Audit Certificate' to produce the official SDG 12 compliance report in INR (₹).</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAB 5: PRICING & ROI CALCULATOR -->
+        <section id="pricing-roi" class="tab-page">
+            <div style="margin-bottom:2rem; text-align:center;">
+                <h2 style="font-family:var(--font-heading); font-size:1.8rem; margin-bottom:0.5rem;">Commercial Pricing & Interactive ROI Calculator</h2>
+                <p style="font-size:0.9rem; color:var(--color-text-muted); max-width:650px; margin:0 auto;">Self-funding AI infrastructure for campus dining halls and corporate cafeterias across India.</p>
+            </div>
+
+            <!-- Pricing Tiers Grid -->
+            <div style="display:grid; grid-template-columns: repeat(3, 1fr); gap:1.5rem; margin-bottom:2.5rem;">
+                <div class="glass-panel" style="padding:1.75rem; position:relative;">
+                    <h3 style="font-family:var(--font-heading); font-size:1.2rem; color:var(--color-cyan);">Starter Mess</h3>
+                    <div style="font-size:2rem; font-weight:800; font-family:var(--font-heading); margin:0.5rem 0; color:#fff;">₹25,000<span style="font-size:0.85rem; color:var(--color-text-muted);"> / month</span></div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted); margin-bottom:1.25rem;">Ideal for single-hall university messes serving up to 800 daily meals.</p>
+                    <ul style="font-size:0.85rem; color:var(--color-text-main); list-style:none; padding:0; margin-bottom:1.5rem; line-height:1.8;">
+                        <li>✔ 1 Edge Optical Camera Unit</li>
+                        <li>✔ Real-Time YOLOv8 Vision Stream</li>
+                        <li>✔ Daily Waste & Loss Reports</li>
+                        <li>✔ Basic Email Recommendations</li>
+                    </ul>
+                    <button class="btn-secondary" style="width:100%;">Request Pilot Trial</button>
+                </div>
+
+                <div class="glass-panel" style="padding:1.75rem; border-color:var(--color-emerald); box-shadow:0 0 25px rgba(16,185,129,0.2); position:relative;">
+                    <div style="position:absolute; top:-12px; right:20px; background:var(--color-emerald); color:#000; font-size:0.7rem; font-weight:800; padding:0.2rem 0.6rem; border-radius:12px;">MOST POPULAR</div>
+                    <h3 style="font-family:var(--font-heading); font-size:1.2rem; color:var(--color-emerald);">Enterprise Campus</h3>
+                    <div style="font-size:2rem; font-weight:800; font-family:var(--font-heading); margin:0.5rem 0; color:#fff;">₹45,000<span style="font-size:0.85rem; color:var(--color-text-muted);"> / month</span></div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted); margin-bottom:1.25rem;">Designed for multi-hall campus dining serving 1,500 - 3,500 daily meals.</p>
+                    <ul style="font-size:0.85rem; color:var(--color-text-main); list-style:none; padding:0; margin-bottom:1.5rem; line-height:1.8;">
+                        <li>✔ 3 Edge Vision Stations</li>
+                        <li>✔ Autonomous Procurement Agent</li>
+                        <li>✔ Automated Purchase Orders (POs)</li>
+                        <li>✔ SEBI BRSR & FSSAI ESG Audit Export</li>
+                        <li>✔ WhatsApp Chef Notifications</li>
+                    </ul>
+                    <button class="btn-primary" style="width:100%;">Deploy Enterprise Trial</button>
+                </div>
+
+                <div class="glass-panel" style="padding:1.75rem; position:relative;">
+                    <h3 style="font-family:var(--font-heading); font-size:1.2rem; color:var(--color-gold);">Multi-Facility Network</h3>
+                    <div style="font-size:2rem; font-weight:800; font-family:var(--font-heading); margin:0.5rem 0; color:#fff;">₹85,000<span style="font-size:0.85rem; color:var(--color-text-muted);"> / month</span></div>
+                    <p style="font-size:0.8rem; color:var(--color-text-muted); margin-bottom:1.25rem;">For large foodservice management contractors (Sodexo, Compass, Elior).</p>
+                    <ul style="font-size:0.85rem; color:var(--color-text-main); list-style:none; padding:0; margin-bottom:1.5rem; line-height:1.8;">
+                        <li>✔ Unlimited Edge Station Nodes</li>
+                        <li>✔ Custom ERP Connectors (SAP / Tally)</li>
+                        <li>✔ Multi-Location Dashboard</li>
+                        <li>✔ Dedicated Success Manager</li>
+                    </ul>
+                    <button class="btn-secondary" style="width:100%;">Contact Enterprise Sales</button>
+                </div>
+            </div>
+
+            <!-- Interactive ROI Calculator Card -->
+            <div class="glass-panel" style="padding:2rem;">
+                <h3 style="font-family:var(--font-heading); font-size:1.3rem; margin-bottom:0.5rem; color:var(--color-emerald);">Calculate Your Mess Savings & ROI</h3>
+                <p style="font-size:0.85rem; color:var(--color-text-muted); margin-bottom:1.5rem;">Select your daily meal volume to estimate your monthly financial savings in Indian Rupees (₹).</p>
+
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:2rem; align-items:center;">
+                    <div>
+                        <label style="font-size:0.85rem; color:var(--color-text-muted); display:block; margin-bottom:0.5rem;">Daily Meals Served:</label>
+                        <input type="range" id="roiMealsRange" min="500" max="5000" step="250" value="1500" style="width:100%; accent-color:var(--color-emerald); cursor:pointer;">
+                        <div style="display:flex; justify-content:space-between; font-size:0.8rem; color:var(--color-text-muted); margin-top:0.4rem;">
+                            <span>500 meals</span>
+                            <span id="roiMealsVal" style="color:var(--color-emerald); font-weight:700; font-size:1rem;">1,500 meals/day</span>
+                            <span>5,000 meals</span>
+                        </div>
+                    </div>
+
+                    <div style="background:rgba(16,185,129,0.08); border:1px solid var(--border-glow); padding:1.5rem; border-radius:10px; text-align:center;">
+                        <div style="font-size:0.8rem; color:var(--color-text-muted);">Estimated Monthly Financial Savings</div>
+                        <div id="roiSavingsVal" style="font-size:2.2rem; font-weight:800; font-family:var(--font-heading); color:var(--color-emerald); margin:0.3rem 0;">₹1,57,500</div>
+                        <div style="font-size:0.75rem; color:var(--color-cyan);">ROI Payback Period: ~45 Days</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
