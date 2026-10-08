@@ -84,11 +84,11 @@ class EcoPlateRequestHandler(BaseHTTPRequestHandler):
         # Static File Serving
         elif path == '/' or path == '/index.html':
             self._send_file(os.path.join(os.path.dirname(__file__), 'index.html'), 'text/html; charset=utf-8')
-        elif path.startswith('/static/css/'):
-            fpath = os.path.join(os.path.dirname(__file__), path.lstrip('/'))
+        elif 'static/css/' in path:
+            fpath = os.path.join(os.path.dirname(__file__), 'static', 'css', os.path.basename(path))
             self._send_file(fpath, 'text/css')
-        elif path.startswith('/static/js/'):
-            fpath = os.path.join(os.path.dirname(__file__), path.lstrip('/'))
+        elif 'static/js/' in path:
+            fpath = os.path.join(os.path.dirname(__file__), 'static', 'js', os.path.basename(path))
             self._send_file(fpath, 'application/javascript')
         else:
             self.send_error(404, "Route Not Found")
